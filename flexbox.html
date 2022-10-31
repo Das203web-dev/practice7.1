@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <script src="https://kit.fontawesome.com/0f9102b880.js" crossorigin="anonymous"></script>
+    <style>
+        .maindiv {
+            border-bottom: 10px solid #ffffc5;
+            display: flex;
+            font-size: 30px;
+        }
+
+        .div1 {
+            width: 150px;
+            padding-left: 10px;
+            text-align: center;
+            background-color: #5a5a5a76;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fa-solid {
+            color: rgb(15, 14, 14);
+            padding-top: 22px;
+            background-color: #5a5a5a76;
+        }
+
+        #box2 {
+            flex-grow: calc(1);
+            justify-content: space-evenly;
+            padding-left: 200px;
+        }
+
+        .list {
+            list-style: none;
+            border-radius: 15px;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .menu-link {
+            color: rgb(9, 9, 9);
+            font-size: 30px;
+            text-decoration: underline;
+        }
+
+        .menu-link:hover {
+            background-image: linear-gradient(rgb(245, 246, 247), black);
+            color: rgba(255, 255, 255, 0.995);
+            border-radius: 10px;
+            padding: 2px;
+        }
+
+        .logo {
+            height: 70px;
+            width: 300px;
+            padding-top: 10px;
+            padding-right: 52px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sub-container {
+            width: 50%;
+            background-color: #ffffc5;
+            padding-bottom: 10px;
+        }
+
+        .first-h1 {
+            border-left: 3px;
+            border-radius: 1.5px;
+            color: orange;
+            font-size: 60px;
+        }
+
+        .second-h1 {
+            font-size: 60px;
+            color: orange;
+            margin-left: 150px;
+
+        }
+
+        .span-1 {
+            color: red;
+            font-size: 40px;
+        }
+
+        .first-para {
+            text-align: justify;
+            width: 600px;
+        }
+
+        .second-para {
+            text-align: justify;
+            justify-content: flex-end;
+            align-items: center;
+            width: 80%;
+            margin-left: 150px;
+        }
+
+        .first-button {
+            padding: 10px;
+            border-radius: 5px;
+            background-image: linear-gradient(#ffffc5, orange);
+            color: rgb(14, 8, 8);
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .second-button {
+            padding: 10px;
+            border-radius: 5px;
+            background-image: linear-gradient(#ffffc5, orange);
+            color: rgb(14, 8, 8);
+            font-weight: 700;
+            font-size: 15px;
+            margin-left: 150px;
+        }
+
+        .second-button:hover {
+            color: white;
+        }
+
+        .first-button:hover {
+            color: white;
+        }
+
+        .first-pic {
+            margin-left: 150px;
+            border-radius: 125px;
+            margin-top: 5px;
+
+
+        }
+
+        .second-pic {
+            border-radius: 125px;
+            height: 350px;
+            width: 550px;
+            margin-left: 50px;
+            align-content: center;
+            margin-top: 25px;
+        }
+
+        #section1 {
+            display: flex;
+            align-items: center;
+            margin: 5px;
+            background-color: #ffffc5;
+        }
+
+        .section-div {
+            border: 1px solid;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .section-div:hover {
+            background-color: #5a5a5a76;
+            box-shadow: 5px 10px rgb(105, 103, 103);
+        }
+
+        .legend {
+            font-size: 35px;
+            color: rgb(224, 224, 251);
+            margin-bottom: 25px;
+        }
+
+        .form-div {
+            color: white;
+        }
+
+        .form-div1 {
+            background: url(pic1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding-top: 15px;
+            height: 400px;
+            width: 100%;
+            background-origin: content-box;
+
+        }
+
+        .box {
+            background-color: cornflowerblue;
+            border: 2px solid red;
+            transform: scale(0.70) rotate(45deg);
+            margin: 35px 20px 35px;
+        }
+
+        .its-me {
+            background: url(pic3.jpg);
+        }
+
+        .its-me,
+        .box {
+            height: 50px;
+            width: 50px;
+
+        }
+
+        .sec2 {
+            display: flex;
+            background-color: #ffffc5;
+        }
+
+        .sec2-first-para {
+            text-align: justify;
+            padding-top: 5px;
+            padding-left: 390px;
+            padding-right: 20px;
+
+        }
+
+        .sec2-second-para {
+            text-align: justify;
+            padding-top: 5px;
+            padding-left: 20px;
+            padding-right: 300px;
+        }
+
+        .sec2-second-h1 {
+            padding-right: 240px;
+            font-size: 40px;
+            padding-left: 15px;
+        }
+
+        .sec2-first-h1 {
+            padding-left: 385px;
+            font-size: 40px;
+        }
+
+        #sec2-style-div {
+            display: inline-block;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .footer-sec {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #5a5a5a76;
+            padding-bottom: 10px;
+        }
+
+        .footer-div {
+            width: 33%;
+            height: 100%;
+        }
+
+        .footer-ul {
+            list-style: none;
+        }
+
+        .fa-brands {
+            margin-top: 10px;
+            padding-right: 10px;
+            font-size: 30px;
+            color: rgb(4, 4, 4);
+        }
+
+        .fa-brands:hover {
+            color: #ffffc5;
+            cursor: pointer;
+        }
+
+        #footer-div2 {
+            background: #020202;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .footer-h2 {
+            text-align: center;
+        }
+
+        .footer-h2-part2 {
+            padding-top: 10px;
+        }
+
+        .footer-h3 {
+            color: white;
+        }
+
+        .footer-para {
+            text-align: justify;
+            padding: 0px 60px;
+        }
+
+        .footer-h2-skill {
+            padding-left: 35px;
+            padding-top: 15px;
+        }
+
+        .footer-link {
+            padding-bottom: 5px;
+            cursor: cell;
+        }
+
+        .form-button {
+            padding: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="maindiv">
+                <i class="fa-solid fa-infinity"></i>
+                <div class="div1">
+                    <img src="signature (2).png" alt="logo" class="logo">
+                </div>
+                <div id="box2" class="div1">
+                    <li class="list"><a href="" class="menu-link">Home</a></li>
+                    <li class="list"><a href="" class="menu-link">About us</a></li>
+                    <li class="list"><a href="" class="menu-link">Gallery</a></li>
+                    <li class="list"><a href="" class="menu-link">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="sub-container">
+                <h1 class="first-h1">Practice <br><span class="span-1">Site</span></h1>
+                <p class="first-para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis repudiandae
+                    doloribus ducimus odio! Ullam dicta aliquid nulla consequatur quisquam est deleniti maiores quo
+                    animi perspiciatis repellendus quos magni fuga commodi impedit culpa veritatis dolores
+                    reprehenderit, quam sequi nostrum? Assumenda ipsum doloribus eveniet mollitia vitae aperiam impedit
+                    nobis commodi numquam perspiciatis.</p>
+                <a href=""><button class="first-button">Hire Me</button></a>
+
+            </div>
+            <div class="sub-container">
+                <img class="first-pic" src="pic3.jpg" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="sub-container">
+                <img class="second-pic" src="pic2.jpg" alt="">
+            </div>
+            <div class="sub-container">
+                <h1 class="second-h1">
+                    Practice Makes <br><span class="span-1">A Man Practice</span>
+                </h1>
+                <p class="second-para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt optio accusantium laboriosam,
+                    neque iusto est voluptatum consequuntur, tenetur molestias deserunt obcaecati repellendus magnam
+                    tempore facere harum amet repudiandae sed quis nostrum porro nesciunt. Corporis praesentium, dolores
+                    quas, sunt culpa eaque id sed adipisci deserunt aliquid laudantium, qui ipsam porro est.
+                </p>
+                <a href=""><button class="second-button">Download CV</button></a>
+            </div>
+        </div>
+        <section id="section1">
+            <div class="section-div">
+                <img class="icon" src="icon/icon.png" alt="">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ex velit sit maiores eveniet itaque
+                    nihil sequi, omnis temporibus totam laudantium voluptates ipsa est vero beatae quaerat explicabo
+                    fuga obcaecati!</p>
+                <a href="#"><button class="first-button">Me</button></a>
+            </div>
+            <div class="section-div">
+                <img class="icon" src="icon/icon.png" alt="">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ex velit sit maiores eveniet itaque
+                    nihil sequi, omnis temporibus totam laudantium voluptates ipsa est vero beatae quaerat explicabo
+                    fuga obcaecati!</p>
+                <a href="#"><button class="first-button">Me</button></a>
+            </div>
+            <div class="section-div">
+                <img class="icon" src="icon/icon.png" alt="">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ex velit sit maiores eveniet itaque
+                    nihil sequi, omnis temporibus totam laudantium voluptates ipsa est vero beatae quaerat explicabo
+                    fuga obcaecati!</p>
+                <a href="#"><button class="first-button">Me</button></a>
+            </div>
+            <div class="section-div">
+                <img class="icon" src="icon/icon.png" alt="">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ex velit sit maiores eveniet itaque
+                    nihil sequi, omnis temporibus totam laudantium voluptates ipsa est vero beatae quaerat explicabo
+                    fuga obcaecati!</p>
+                <a href="#"><button class="first-button">Me</button></a>
+            </div>
+        </section>
+        <section class="sec2">
+            <div>
+                <h1 class="sec2-first-h1">This is a style</h1>
+                <p class="sec2-first-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium quam
+                    doloribus expedita aliquam
+                    nesciunt nemo dolor, deleniti velit reprehenderit mollitia error dolorem iure sequi voluptates ab
+                    laboriosam ipsa neque reiciendis.</p>
+            </div>
+            <div id="sec2-style-div">
+                <div class="box design">
+                    <div class="its-me">
+                    </div>
+                </div>
+                <div class="box design">
+                    <div class="its-me">
+                    </div>
+                </div>
+                <div class="box design">
+                    <div class="its-me">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 class="sec2-second-h1">This is a style</h1>
+                <p class="sec2-second-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt aliquid
+                    facere facilis? Possimus
+                    minima nisi nam, iure incidunt voluptas eos voluptatum reiciendis, quis officia, sint cum. Vitae
+                    commodi esse illo.</p>
+            </div>
+        </section>
+        <section class="form-div1">
+            <form action="">
+                <legend class="legend">Contact Us</legend>
+                <label class="form-div" for="name">Name</label><br>
+                <input type="text" id="name" name="name" placeholder="name"><br>
+                <label class="form-div" for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="email"><br>
+                <label class="form-div" for="pass">Password</label><br>
+                <input type="password" name="pass" id="pass" placeholder="password"><br>
+                <label class="form-div" for="address">Adress</label><br>
+                <input type="text" name="address" id="address" placeholder="address"><br>
+                <input class="form-button" type="button" value="Submit"><br>
+                <input class="form-button" type="reset" value="Reset">
+
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer-sec">
+            <div class="footer-div">
+                <h2 class="footer-h2">Colorlib</h2>
+                <p class="footer-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde magnam sint ipsam
+                    aut deserunt? Illum
+                    praesentium consequatur quisquam itaque aliquam.</p>
+            </div>
+            <div class="footer-div">
+                <h2 class="footer-h2-skill">My Skills</h2>
+                <ul class="footer-ul">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT</li>
+                    <li>BOOTSTRAP</li>
+                </ul>
+            </div>
+            <div class="footer-div">
+                <h2 class="footer-h2-part2">Contact-Us</h2>
+                <p>01765768212</p>
+                <a class="footer-link" href="mailto:shuvajitdas838@gmail.com">shuvajitdas838@gmail.com</a><br>
+                <a target="_blank" href="https://www.facebook.com/lunetic.shuvo.3">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/shuvojit-das-966529246/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCxRuZjXnmsXsY05rGGIQCBw"><i
+                        class="fa-brands fa-youtube"></i></a>
+
+            </div>
+        </section>
+        <div id="footer-div2">
+            <h3 class="footer-h3">@All rights preserved Practice</h3>
+            <p class="footer-h3">Copyright</p>
+        </div>
+    </footer>
+</body>
+
+</html>
